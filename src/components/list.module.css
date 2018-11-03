@@ -24,7 +24,7 @@
 }
 
 .a {
-	color: #1d7363;
+	color: #DD6E42;
 	display: block;
 	text-decoration: none;
 	height: 2.75rem;
@@ -33,5 +33,5 @@
 }
 
 .li:hover {
-	background-color: #fff;
+	background-color: #E8DAB2;
 }
