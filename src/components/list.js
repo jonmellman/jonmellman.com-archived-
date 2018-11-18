@@ -1,13 +1,41 @@
 import React from 'react';
-import '@material/card/dist/mdc.card.min.css';
+import Card from '@material-ui/core/Card';
+import CardContent from '@material-ui/core/CardContent';
+import CardHeader from '@material-ui/core/CardHeader';
+import PropTypes from 'prop-types';
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-export default props => (
-    <ul>
-        {props.items.map(({ href, label, description }, i) => (
-            <li key={i} className="mdc-card">
-                <a href={href} target="_blank" rel="noopener noreferrer">{label}</a>
-                {description}
-            </li>
-        ))}
-    </ul>
-);
+function withTheme(theme) {
+    return function (WrappedComponent) {
+        return (
+            <MuiThemeProvider theme={theme}>
+                {WrappedComponent}
+            </MuiThemeProvider>
+        );
+    }
+}
+
+export default function List({ items }) {
+    const headerTheme = createMuiTheme({
+        typography: {
+            useNextVariants: true,
+            fontFamily: "'Varela Round',sans-serif",
+        },
+    });
+
+    return (
+        <div>
+            {items.map(({ href, label, description }, i) => (
+                <Card key={i}>
+                    {withTheme(headerTheme)(<CardHeader title={label} />)}
+                    <CardContent>
+                        {description}
+                    </CardContent>
+                </Card>
+            ))}
+        </div>
+    );
+}
+List.propTypes = {
+    items: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
