@@ -5,15 +5,11 @@ import CardHeader from '@material-ui/core/CardHeader';
 import PropTypes from 'prop-types';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
 
-function withTheme(theme) {
-    return function (WrappedComponent) {
-        return (
-            <MuiThemeProvider theme={theme}>
-                {WrappedComponent}
-            </MuiThemeProvider>
-        );
-    }
-}
+const withTheme = theme => WrappedComponent => (
+    <MuiThemeProvider theme={theme}>
+        {WrappedComponent}
+    </MuiThemeProvider>
+);
 
 export default function List({ items }) {
     const headerTheme = createMuiTheme({
