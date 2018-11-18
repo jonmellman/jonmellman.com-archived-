@@ -13,9 +13,9 @@ export const query = graphql`
   query {
     imgLogo: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
-            ...GatsbyImageSharpFluid
-        }
+            fixed(width: 80) {
+                ...GatsbyImageSharpFixed
+            }
         }
     },
     imgResume: file(relativePath: { eq: "resume.png" }) {
@@ -49,13 +49,17 @@ export const query = graphql`
   }
 `;
 
+const imgStyle = {
+    display: 'block',
+    margin: 'auto',
+};
 const IndexPage = ({ data }) => (
     <Layout>
+        <Img fixed={data.imgLogo.childImageSharp.fixed} style={imgStyle}/>
         <h1>
             <span role="img" aria-label="Hi">👋 </span>
         Hi people
         </h1>
-        <Img fluid={data.imgLogo.childImageSharp.fluid} />
         <p>I'm Jon. Thanks for visiting my website. It's under construction.</p>
         <p>I'm a full-stack product engineer who loves rigorous exception handling, efficient concurrent code, and fries with mayonnaise.</p>
         <h1>Projects</h1>
