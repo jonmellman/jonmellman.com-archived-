@@ -29,7 +29,7 @@ const IndexPage = () => (
     {/*<Sprinkles/>*/}
     <h1 className="test">Hi people</h1>
     <p>I'm Jon. Thanks for visiting my website. It's under construction.</p>
-    <p>I'm a full-stack product engineer who builds web apps, back ends, and all sorts of fun stuff.</p>
+    <p>I'm a full-stack product engineer who loves thoughtful exception handling, efficient concurrent code, and fries with mayonnaise.</p>
     {/*<div style={{ maxWidth: '300px', marginBottom: '1.45rem' }}>
       <Image />
     </div>*/}
