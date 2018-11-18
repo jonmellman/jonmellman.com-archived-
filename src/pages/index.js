@@ -19,18 +19,22 @@ const IndexPage = () => (
       {
         href: '/resume.pdf',
         label: 'Resume',
+        description: 'This is my resume',
       },
       {
         href: '/minesweeper',
         label: 'Minesweeper',
+        description: 'This is a game I made to learn Angular 2 when the beta was first announced.',
       },
       {
         href: '/trending-wikis',
         label: 'Trending Wikis',
+        description: 'This shows what the most popular wiki articles are this week. I wrote this to learn D3 and explore Wikipedia\'s API.',
       },
       {
         href: '/3d-audio-visualizer',
         label: '3D Audio Spectogram',
+        description: 'A fun little project that creates a 3D spectogram of your microphone audio. I made this to learn about three.js and the Web Audio API.',
       },
     ]}
     />
