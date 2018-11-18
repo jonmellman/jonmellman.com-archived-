@@ -11,6 +11,7 @@
         ]
       }
     ],
-    "react/no-unescaped-entities": [false]
+    "react/no-unescaped-entities": [false],
+    "react/jsx-indent": [true, 4]
   }
 }

@@ -1,12 +1,11 @@
-import React from "react"
-import styles from "./list.module.css"
+import React from 'react';
 
 export default props => (
-    <ul className={styles.ul}>
-        {props.items.map((item, i) =>
-            <li key={i} className={styles.li}>
-                <a href={item.href} className={styles.a} target="_blank" rel="noopener noreferrer">{item.label}</a>
+    <ul>
+        {props.items.map(({ href, label }, i) => (
+            <li key={i}>
+                <a href={href} target="_blank" rel="noopener noreferrer">{label}</a>
             </li>
-        )}
+        ))}
     </ul>
-)
+);
