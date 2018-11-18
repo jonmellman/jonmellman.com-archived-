@@ -1,0 +1,16 @@
+{
+  "extends": "eslint-config-airbnb",
+  "rules": {
+    "func-names": ["error", "never"],
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [
+          ".js",
+          ".jsx"
+        ]
+      }
+    ],
+    "react/no-unescaped-entities": [false]
+  }
+}
