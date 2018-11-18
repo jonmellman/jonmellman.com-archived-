@@ -1,35 +1,23 @@
 import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardContent from '@material-ui/core/CardContent';
-import CardHeader from '@material-ui/core/CardHeader';
 import PropTypes from 'prop-types';
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-
-const withTheme = theme => WrappedComponent => (
-    <MuiThemeProvider theme={theme}>
-        {WrappedComponent}
-    </MuiThemeProvider>
-);
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
+import GridListTileBar from '@material-ui/core/GridListTileBar';
+import Img from 'gatsby-image';
 
 export default function List({ items }) {
-    const headerTheme = createMuiTheme({
-        typography: {
-            useNextVariants: true,
-            fontFamily: "'Varela Round',sans-serif",
-        },
-    });
-
+    const style = {
+        textShadow: 'none',
+    };
     return (
-        <div>
-            {items.map(({ href, label, description }, i) => (
-                <Card key={i}>
-                    {withTheme(headerTheme)(<CardHeader title={label} />)}
-                    <CardContent>
-                        {description}
-                    </CardContent>
-                </Card>
+        <GridList>
+            {items.map(({ href, label, description, img }, i) => (
+                <GridListTile key={i} component="a" href={href} target="_blank" style={style}>
+                    <Img fluid={img.childImageSharp.fluid} />
+                    <GridListTileBar title={label} />
+                </GridListTile>
             ))}
-        </div>
+        </GridList>
     );
 }
 List.propTypes = {
