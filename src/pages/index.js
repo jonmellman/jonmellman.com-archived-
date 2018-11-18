@@ -2,14 +2,12 @@ import React from 'react';
 
 import Layout from '../components/layout';
 import List from '../components/list';
-// import Sprinkles from '../components/sprinkles';
 
 // Workaround for https://github.com/gatsbyjs/gatsby/issues/7399
 import typography from '../utils/typography';
 
 const IndexPage = () => (
   <Layout>
-    {/* <Sprinkles /> */}
     <h1>Hi people</h1>
     <p>I'm Jon. Thanks for visiting my website. It's under construction.</p>
     <p>I'm a full-stack product engineer who loves rigorous exception handling, efficient concurrent code, and fries with mayonnaise.</p>
