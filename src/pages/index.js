@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 
@@ -49,16 +50,16 @@ export const query = graphql`
   }
 `;
 
-const imgStyle = {
+const imgLogoStyle = {
     display: 'block',
     margin: 'auto',
 };
 const IndexPage = ({ data }) => (
     <Layout>
-        <Img fixed={data.imgLogo.childImageSharp.fixed} style={imgStyle}/>
+        <Img fixed={data.imgLogo.childImageSharp.fixed} style={imgLogoStyle} />
         <h1>
             <span role="img" aria-label="Hi">👋 </span>
-        Hi people
+            Hi people
         </h1>
         <p>I'm Jon. Thanks for visiting my website. It's under construction.</p>
         <p>I'm a full-stack product engineer who loves rigorous exception handling, efficient concurrent code, and fries with mayonnaise.</p>
