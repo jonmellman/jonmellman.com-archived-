@@ -6,6 +6,9 @@ lincoln.overrideThemeStyles = () => ({
         textShadow: 'none',
         backgroundImage: 'none',
     },
+    'p a:hover': {
+        textDecoration: 'underline',
+    },
     'a img:hover': {
         filter: 'contrast(1.5)',
     },
