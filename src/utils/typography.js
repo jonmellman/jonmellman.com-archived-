@@ -4,6 +4,10 @@ import lincoln from 'typography-theme-lincoln';
 lincoln.overrideThemeStyles = () => ({
     a: {
         textShadow: 'none',
+        backgroundImage: 'none',
+    },
+    'a img:hover': {
+        filter: 'contrast(1.5)',
     },
 });
 

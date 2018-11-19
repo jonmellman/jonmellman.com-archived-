@@ -10,7 +10,7 @@ export default function List({ items }) {
         textShadow: 'none',
     };
     return (
-        <GridList cols={3}>
+        <GridList cols={2}>
             {items.map(({ href, label, description, img }, i) => (
                 <GridListTile key={i} component="a" href={href} target="_blank" style={style}>
                     <Img fluid={img.childImageSharp.fluid} />
