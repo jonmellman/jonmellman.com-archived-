@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import Img from 'gatsby-image';
 import { graphql } from 'gatsby';
 
@@ -10,8 +9,13 @@ import List from '../components/list';
 // eslint-disable-next-line no-unused-vars
 import typography from '../utils/typography';
 
+(function () {
+    return 'this is a test';
+}());
+
+
 export const query = graphql`
-  query {
+query {
     imgLogo: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
             fixed(width: 80) {
@@ -20,34 +24,34 @@ export const query = graphql`
         }
     },
     imgResume: file(relativePath: { eq: "resume.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
-          ...GatsbyImageSharpFluid
+        childImageSharp {
+            fluid(maxWidth: 400, maxHeight: 250) {
+                ...GatsbyImageSharpFluid
+            }
         }
-      }
     },
     imgMinesweeper: file(relativePath: { eq: "minesweeper.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
-          ...GatsbyImageSharpFluid
+        childImageSharp {
+            fluid(maxWidth: 400, maxHeight: 250) {
+                ...GatsbyImageSharpFluid
+            }
         }
-      }
     },
     imgTrendingWikis: file(relativePath: { eq: "trending-wikis.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
-          ...GatsbyImageSharpFluid
+        childImageSharp {
+            fluid(maxWidth: 400, maxHeight: 250) {
+                ...GatsbyImageSharpFluid
+            }
         }
-      }
     },
     imgAudioSpectogram: file(relativePath: { eq: "audio-spectogram.png" }) {
-      childImageSharp {
-        fluid(maxWidth: 400, maxHeight: 250) {
-          ...GatsbyImageSharpFluid
+        childImageSharp {
+            fluid(maxWidth: 400, maxHeight: 250) {
+                ...GatsbyImageSharpFluid
+            }
         }
-      }
     }
-  }
+}
 `;
 
 const imgLogoStyle = {
@@ -57,13 +61,20 @@ const imgLogoStyle = {
 const IndexPage = ({ data }) => (
     <Layout>
         <Img fixed={data.imgLogo.childImageSharp.fixed} style={imgLogoStyle} />
-        <h1>
-            <span role="img" aria-label="Hi">👋 </span>
-            Hi people
-        </h1>
+        <a href="#header">
+            <h1 id="header">
+                <span role="img" aria-label="Hi">👋 </span>
+                Hi people
+            </h1>
+        </a>
         <p>I'm Jon. Thanks for visiting my website. It's under construction.</p>
-        <p>I'm a full-stack product engineer who loves rigorous exception handling, efficient concurrent code, and fries with mayonnaise.</p>
-        <h1>Projects</h1>
+        <p>I'm a full-stack software engineer who loves rigorous exception handling, efficient concurrent code, and fries with mayonnaise.</p>
+        <a href="#projects">
+            <h1 id="projects">
+                <span role="img" aria-label="Hi">🤓 </span>
+                Projects
+            </h1>
+        </a>
         <List items={[
             {
                 href: '/resume.pdf',
@@ -91,7 +102,34 @@ const IndexPage = ({ data }) => (
             },
         ]}
         />
+        <a href="#music">
+            <h1 id="music">
+                <span role="img" aria-label="Hi">🤘 </span>
+                Music
+            </h1>
+        </a>
+        <p>
+            I play bass with&nbsp;
+            <a href="https://thedriftwoodwalkers.com" target="_blank" rel="noopener noreferrer">
+                The Driftwood Walkers
+            </a>
+            .
+        </p>
+        <p>
+            Sometimes I make music and put it on&nbsp;
+            <a href="https://soundcloud.com/jonathan-mellman" target="_blank" rel="noopener noreferrer">
+                SoundCloud
+            </a>
+            .
+        </p>
+        <p>
+            <a href="https://open.spotify.com/user/1242727868/playlist/74JYIKcLYVjm5oW2tMXNSH?si=lJQYbfEXTbqyjkl9k77gyw" target="_blank" rel="noopener noreferrer">
+                Here&nbsp;
+            </a>
+            is a Spotify playlist of all the songs I've ever Shazaamed, from least to most recent.
+        </p>
     </Layout>
 );
 
 export default IndexPage;
+

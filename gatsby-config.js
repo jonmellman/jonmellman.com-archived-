@@ -2,9 +2,6 @@ const path = require('path');
 
 module.exports = {
     pathPrefix: '/home', // This is coupled to the site's dirname.
-    siteMetadata: {
-        title: 'Jon Mellman',
-    },
     plugins: [
         'gatsby-plugin-react-helmet',
         {
