@@ -10,7 +10,7 @@ lincoln.overrideThemeStyles = () => ({
         maxWidth: '632px',
         padding: '32px',
         backgroundColor: 'white',
-        boxShadow: '20px 20px 20px 0px black',
+        boxShadow: '20px 20px 0px 0px black',
     },
     a: {
         textShadow: 'none',
