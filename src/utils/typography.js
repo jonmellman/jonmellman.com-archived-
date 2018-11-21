@@ -7,10 +7,11 @@ lincoln.overrideThemeStyles = () => ({
     },
     body: {
         margin: '3rem auto',
-        maxWidth: '632px',
-        padding: '32px',
+        maxWidth: '36rem',
+        minHeight: '40rem',
+        padding: '2rem',
         backgroundColor: 'white',
-        boxShadow: '20px 20px 0px 0px black',
+        boxShadow: '1rem 1rem 0rem 0rem #00000099',
     },
     a: {
         textShadow: 'none',
@@ -22,6 +23,10 @@ lincoln.overrideThemeStyles = () => ({
     'a img:hover': {
         filter: 'contrast(1.5)',
     },
+    '.grid-tile': {
+        flex: '1 1 auto',
+        minWidth: '260px',
+    }
 });
 
 const typography = new Typography(lincoln);
