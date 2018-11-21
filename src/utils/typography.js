@@ -20,13 +20,20 @@ lincoln.overrideThemeStyles = () => ({
     'p a:hover': {
         textDecoration: 'underline',
     },
-    'a img:hover': {
-        filter: 'contrast(1.5)',
-    },
     '.grid-tile': {
         flex: '1 1 auto',
         minWidth: '260px',
-    }
+    },
+    '.grid-title-bar': {
+        transition: 'bottom 300ms cubic-bezier(0.4, 0, 0.2, 1)',
+        bottom: '0',
+    },
+    '.grid-tile:hover img': {
+        filter: 'blur(3px) grayscale(40%)',
+    },
+    '.grid-tile:hover .grid-title-bar': {
+        bottom: '100px',
+    },
 });
 
 const typography = new Typography(lincoln);

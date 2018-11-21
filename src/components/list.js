@@ -14,7 +14,7 @@ export default function List({ items }) {
             {items.map(({ href, label, description, img }, i) => (
                 <GridListTile className="grid-tile" key={i} component="a" href={href} target="_blank" style={style}>
                     <Img fluid={img.childImageSharp.fluid} />
-                    <GridListTileBar title={label} />
+                    <GridListTileBar className="grid-title-bar" title={label} />
                 </GridListTile>
             ))}
         </GridList>
