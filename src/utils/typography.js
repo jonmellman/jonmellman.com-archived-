@@ -23,16 +23,27 @@ lincoln.overrideThemeStyles = () => ({
     '.grid-tile': {
         flex: '1 1 auto',
         minWidth: '260px',
+        textShadow: 'none',
     },
-    '.grid-title-bar': {
-        transition: 'bottom 300ms cubic-bezier(0.4, 0, 0.2, 1)',
-        bottom: '0',
+    '.grid-tile img': {
+        transition: 'filter 300ms cubic-bezier(0.4, 0, 0.2, 1)',
     },
     '.grid-tile:hover img': {
-        filter: 'blur(3px) grayscale(40%)',
+        filter: 'blur(2px) grayscale(50%)',
+    },
+    '.grid-tile .icon-container': {
+        position: 'relative',
+        left: '5.5rem',
+        transition: 'left 300ms cubic-bezier(0.4, 0, 0.2, 1)',
+    },
+    '.grid-tile:hover .icon-container': {
+        left: '-1rem',
+    },
+    '.grid-title-bar': {
+        transition: 'background-color 100ms cubic-bezier(0.4, 0, 0.2, 1)',
     },
     '.grid-tile:hover .grid-title-bar': {
-        bottom: '100px',
+        backgroundColor: 'rgba(0, 0, 0, 0.6)',
     },
 });
 

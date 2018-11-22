@@ -77,28 +77,31 @@ const IndexPage = ({ data }) => (
         </a>
         <List items={[
             {
-                href: '/resume.pdf',
                 label: 'Resume',
-                description: 'This is my resume',
+                description: 'Google Docs :)',
                 img: data.imgResume,
+                externalLink: '/resume.pdf',
             },
             {
-                href: '/minesweeper',
                 label: 'Minesweeper',
-                description: 'This is a game I made to learn Angular 2 when the beta was first announced.',
+                description: 'Angular 2',
                 img: data.imgMinesweeper,
+                externalLink: '/minesweeper',
+                githubLink: 'https://github.com/jonmellman/angular2-minesweeper',
             },
             {
-                href: '/trending-wikis',
                 label: 'Trending Wikis',
-                description: 'This shows what the most popular wiki articles are this week. I wrote this to learn D3 and explore Wikipedia\'s API.',
+                description: 'D3.js, Wikipedia APIs',
                 img: data.imgTrendingWikis,
+                externalLink: '/trending-wikis',
+                githubLink: 'https://github.com/jonmellman/trending-wkis',
             },
             {
-                href: '/3d-audio-visualizer',
-                label: '3D Audio Spectogram',
-                description: 'A fun little project that creates a 3D spectogram of your microphone audio. I made this to learn about three.js and the Web Audio API.',
+                label: '3D Spectogram',
+                description: 'three.js, Web Audio APIs',
                 img: data.imgAudioSpectogram,
+                externalLink: '/3d-audio-visualizer',
+                githubLink: 'https://github.com/jonmellman/3d-audio-visualizer',
             },
         ]}
         />
@@ -123,10 +126,11 @@ const IndexPage = ({ data }) => (
             .
         </p>
         <p>
+            I keep a&nbsp;
             <a href="https://open.spotify.com/user/1242727868/playlist/74JYIKcLYVjm5oW2tMXNSH?si=lJQYbfEXTbqyjkl9k77gyw" target="_blank" rel="noopener noreferrer">
-                Here&nbsp;
+                Spotify playlist&nbsp;
             </a>
-            is a Spotify playlist of all the songs I've ever Shazaamed, from least to most recent.
+            of all the songs I've ever Shazaamed (from least to most recent).
         </p>
     </Layout>
 );
