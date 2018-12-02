@@ -9,11 +9,6 @@ import List from '../components/list';
 // eslint-disable-next-line no-unused-vars
 import typography from '../utils/typography';
 
-(function () {
-    return 'this is a test';
-}());
-
-
 export const query = graphql`
 query {
     imgLogo: file(relativePath: { eq: "icon.png" }) {
@@ -24,6 +19,13 @@ query {
         }
     },
     imgResume: file(relativePath: { eq: "resume.png" }) {
+        childImageSharp {
+            fluid(maxWidth: 400, maxHeight: 250) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    },
+    imgPersonalSite: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
             fluid(maxWidth: 400, maxHeight: 250) {
                 ...GatsbyImageSharpFluid
@@ -79,6 +81,12 @@ const IndexPage = ({ data }) => (
                 description: 'Google Docs :)',
                 img: data.imgResume,
                 externalLink: '/resume.pdf',
+            },
+            {
+                label: 'jonmellman.com',
+                description: 'GatsbyJS, ReactJS, TypeScript',
+                img: data.imgPersonalSite,
+                githubLink: 'https://github.com/jonmellman/jonmellman.com',
             },
             {
                 label: 'Minesweeper',
