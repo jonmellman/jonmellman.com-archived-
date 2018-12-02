@@ -27,6 +27,13 @@ query {
     },
     imgPersonalSite: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
+            fluid(maxWidth: 600, maxHeight: 400) {
+                ...GatsbyImageSharpFluid
+            }
+        }
+    },
+    imgJamRecorder: file(relativePath: { eq: "jamrecorder.png" }) {
+        childImageSharp {
             fluid(maxWidth: 400, maxHeight: 250) {
                 ...GatsbyImageSharpFluid
             }
@@ -87,6 +94,12 @@ const IndexPage = ({ data }) => (
                 description: 'GatsbyJS, ReactJS, TypeScript',
                 img: data.imgPersonalSite,
                 githubLink: 'https://github.com/jonmellman/jonmellman.com',
+            },
+            {
+                label: 'JamRecorder',
+                description: 'AWS Lambda, Alexa SDK, Flask, ...',
+                img: data.imgJamRecorder,
+                githubLink: 'https://github.com/jonmellman/JamRecorder/blob/master/README.md',
             },
             {
                 label: 'Minesweeper',
