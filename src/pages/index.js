@@ -27,7 +27,7 @@ query {
     },
     imgPersonalSite: file(relativePath: { eq: "icon.png" }) {
         childImageSharp {
-            fluid(maxWidth: 600, maxHeight: 400) {
+            fluid(maxWidth: 400, maxHeight: 250, cropFocus: CENTER) {
                 ...GatsbyImageSharpFluid
             }
         }
@@ -76,7 +76,7 @@ const IndexPage = ({ data }) => (
             </h1>
         </a>
         <p>I'm Jon. Thanks for visiting my website. It's under construction.</p>
-        <p>I'm a full-stack software engineer who loves rigorous exception handling, efficient concurrent code, and fries with mayonnaise.</p>
+        <p>I'm a Seattle-based full-stack software engineer who loves rigorous exception handling, efficient concurrent code, and fries with mayonnaise.</p>
         <a href="#projects">
             <h1 id="projects">
                 Projects
@@ -85,7 +85,7 @@ const IndexPage = ({ data }) => (
         <List items={[
             {
                 label: 'Resume',
-                description: 'Google Docs :)',
+                description: ' ',
                 img: data.imgResume,
                 externalLink: '/resume.pdf',
             },
