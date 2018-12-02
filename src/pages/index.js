@@ -63,7 +63,6 @@ const IndexPage = ({ data }) => (
         <Img fixed={data.imgLogo.childImageSharp.fixed} style={imgLogoStyle} />
         <a href="#header">
             <h1 id="header">
-                <span role="img" aria-label="Hi">👋 </span>
                 Hi people
             </h1>
         </a>
@@ -71,7 +70,6 @@ const IndexPage = ({ data }) => (
         <p>I'm a full-stack software engineer who loves rigorous exception handling, efficient concurrent code, and fries with mayonnaise.</p>
         <a href="#projects">
             <h1 id="projects">
-                <span role="img" aria-label="Hi">🤓 </span>
                 Projects
             </h1>
         </a>
@@ -107,7 +105,6 @@ const IndexPage = ({ data }) => (
         />
         <a href="#music">
             <h1 id="music">
-                <span role="img" aria-label="Hi">🤘 </span>
                 Music
             </h1>
         </a>
