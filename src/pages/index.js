@@ -48,7 +48,7 @@ query {
     },
     imgTrendingWikis: file(relativePath: { eq: "trending-wikis.png" }) {
         childImageSharp {
-            fluid(maxWidth: 400, maxHeight: 250) {
+            fluid(maxWidth: 400, maxHeight: 250, cropFocus: SOUTHWEST) {
                 ...GatsbyImageSharpFluid
             }
         }
