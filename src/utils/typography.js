@@ -39,6 +39,11 @@ lincoln.overrideThemeStyles = () => ({
     '.grid-tile:hover .icon-container': {
         left: '-1rem',
     },
+    '@media (hover: none)': {
+        '.grid-tile .icon-container': {
+            left: '-1rem',
+        },
+    },
     '.grid-title-bar': {
         transition: 'background-color 100ms cubic-bezier(0.4, 0, 0.2, 1)',
     },
