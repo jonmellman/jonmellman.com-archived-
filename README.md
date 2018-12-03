@@ -9,7 +9,7 @@
 
 Hi there. This is the source code for my personal website. It's a GatsbyJS project which uses ReactJS and TypeScript.
 
-After cloning, host the development server:
+After cloning, simply install dependencies and host the development server:
 
 ```
 yarn
