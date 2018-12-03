@@ -7,7 +7,7 @@
   jonmellman.com
 </h1>
 
-This is the source code for my personal website. It's a GatsbyJS project which uses ReactJS and TypeScript.
+Hi there. This is the source code for my personal website. It's a GatsbyJS project which uses ReactJS and TypeScript.
 
 After cloning, host the development server:
 
